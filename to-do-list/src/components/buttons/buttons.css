@@ -1,0 +1,21 @@
+button {
+  height: 50px;
+  padding: 10;
+  border-width: 3px;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  border-radius: 12px;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+text {
+  font-size: 15px;
+  font-weight: bold;
+}
