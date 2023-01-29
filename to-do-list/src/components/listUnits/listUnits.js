@@ -10,7 +10,7 @@ import {useSelector} from 'react-redux';
 
 const ListUnits = props => {
   const dispatch = useDispatch();
-  const [editedTask, setEditedTask] = useState(null);
+  const [editedTask, setEditedTask] = useState(props.text);
   const [checked, setChecked] = useState(false);
   const [reEdit, setReEdit] = useState(false);
   const done = useSelector(state => state.list.doneList);
@@ -27,7 +27,6 @@ const ListUnits = props => {
     if (event.key === 'Enter') {
       dispatch(editItem([props.text, editedTask]));
       setReEdit(false);
-      setEditedTask(null);
     }
   };
   return (
