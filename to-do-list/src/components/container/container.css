@@ -3,5 +3,19 @@ section {
   padding: 50px;
   margin-top: 20px;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  background-color: white;
+  background: radial-gradient(
+    circle at center,
+    rgb(185, 160, 160) 0,
+    rgb(140, 140, 208),
+    #3b4f68 100%
+  );
 }
