@@ -14,8 +14,8 @@ li {
   background-color: white;
   background: radial-gradient(
     circle at center,
-    rgb(185, 160, 160) 0,
-    rgb(140, 140, 208),
+    rgb(212, 204, 204) 0,
+    rgb(160, 160, 211),
     #3b4f68 100%
   );
 }
