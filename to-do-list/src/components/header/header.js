@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './header.css';
 import {setList} from '../../management/features/listSlice';
 import {useDispatch} from 'react-redux';
 
@@ -13,10 +12,11 @@ const Header = () => {
     }
   };
   return (
-    <div className="header-container">
-      <div className="input-div">
+    <div className="w-full flex justify-center items-center rounded-2xl">
+      <div className="w-full flex justify-center">
         <input
           onKeyDown={handleKeyDown}
+          className="bg-white outline-none md:py-1"
           name="newTask"
           value={newTask}
           onChange={e => setNewTask(e.target.value)}

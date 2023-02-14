@@ -1,11 +1,12 @@
 import React from 'react';
-import './buttons.css';
 
 const Buttons = props => {
   return (
     <>
       <button onClick={props.buttonTask}>
-        <text>{props.buttonTitle}</text>
+        <text className="font-bold min-[250px]:text-sm sm:text-base">
+          {props.buttonTitle}
+        </text>
       </button>
     </>
   );

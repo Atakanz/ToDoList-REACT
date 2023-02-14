@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import './container.css';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import {useSelector} from 'react-redux';
@@ -25,22 +24,33 @@ const Container = () => {
     setCurrentList(list);
   }, [list]);
   const todoItems = currentList.map((todo, index) => (
-    <li key={index}>
+    <li key={index} className={`w-full`}>
       <ListUnits text={todo} />
     </li>
   ));
+
   return (
     <>
-      <section className="container">
-        <Header />
-        {todoItems}
-        <Footer
-          activeNumber={activeOnes.length}
-          activesTask={setActiveOnes}
-          allTask={setAll}
-          doneTask={setDone}
-        />
-      </section>
+      <div
+        className={`px-4 border-2 border-white rounded-3xl 2xl:w-1/2 min-[250px]:w-full md:w-4/5 py-8`}>
+        <div className="flex items-center">
+          <Header />
+        </div>
+        <div
+          className={`my-1 ${
+            currentList.length > 7 ? 'columns-2' : 'columns-1'
+          }`}>
+          <div className="space-y-1">{todoItems}</div>
+        </div>
+        <div>
+          <Footer
+            activeNumber={activeOnes.length}
+            activesTask={setActiveOnes}
+            allTask={setAll}
+            doneTask={setDone}
+          />
+        </div>
+      </div>
     </>
   );
 };
