@@ -13,7 +13,7 @@ const Footer = props => {
     <>
       <div className="lg:grid lg:grid-cols-3 flex items-center min-[250px]:flex-row min-[250px]:flex min-[250px]:justify-evenly">
         <div>
-          <p className="text-white text-base">
+          <p className="text-white min-[250px]:text-xs md:text-base">
             {props.activeNumber} items left
           </p>
         </div>
