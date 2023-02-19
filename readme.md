@@ -1,4 +1,4 @@
-# HotelWebSite
+# TO DO LIST 
 
 ## [Demo Link](https://todolistreactjsatakanz.netlify.app/)
 
@@ -9,9 +9,10 @@
 
 ## FEATURES
 
-- Responsive design
-- Re-edit the list items in redux array by double-clicking even after being added
-- See all of the written and truncated long list units on modal view by hovering
+- Responsive design with tailwind
+- Re-edit the tasks in redux array by double-clicking even after being added
+- See all of the written and truncated long tasks on modal view by hovering
+- Mark the completed tasks
 - Filter the list
 
 <img src="./todolist.png" width="400"/>
