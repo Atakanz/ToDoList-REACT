@@ -27,22 +27,22 @@ const ListUnits = props => {
     setEditedTask(props.text);
   }, [reEdit]);
   const editTask = event => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && editedTask) {
       dispatch(editItem([props.text, editedTask]));
       setReEdit(false);
     }
   };
   return (
     <>
-      <div className="flex flex-row items-center rounded-2xl bg-white px-1">
-        <div className="flex items-center p-1">
+      <div className="flex flex-row rounded-2xl bg-white ">
+        <div className="flex px-1">
           <input
             type="checkbox"
             checked={isDone ? true : false}
             onChange={handleChange}></input>
         </div>
         {reEdit ? (
-          <div>
+          <div className="flex items-center justify-center">
             <input
               onDoubleClick={() => setReEdit(false)}
               className="bg-white flex justify-items-stretch items-stretch border-0 min-[250px]:text-xs md:text-base lg:text-lg outline-none text-editColor"
@@ -52,7 +52,7 @@ const ListUnits = props => {
               onChange={e => setEditedTask(e.target.value)}></input>
           </div>
         ) : (
-          <div className="truncate flex-1 shrink-0">
+          <div className="truncate flex flex-1 shrink-0 items-center ">
             <p
               onMouseEnter={() => setModal(true)}
               onMouseLeave={() => setModal(false)}

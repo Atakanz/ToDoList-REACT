@@ -3,7 +3,7 @@ import {setList} from '../../management/features/listSlice';
 import {useDispatch} from 'react-redux';
 
 const Header = () => {
-  const [newTask, setNewTask] = useState(null);
+  const [newTask, setNewTask] = useState('');
   const dispatch = useDispatch();
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
@@ -18,7 +18,7 @@ const Header = () => {
           onKeyDown={handleKeyDown}
           className="bg-white outline-none md:py-1"
           name="newTask"
-          value={newTask}
+          value={newTask ? newTask : ''}
           onChange={e => setNewTask(e.target.value)}
           placeholder="What needs to be done?"></input>
       </div>

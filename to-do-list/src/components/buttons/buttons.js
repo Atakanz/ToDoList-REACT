@@ -4,9 +4,9 @@ const Buttons = props => {
   return (
     <>
       <button onClick={props.buttonTask}>
-        <text className="font-bold min-[250px]:text-sm sm:text-base">
+        <p className="font-bold min-[250pp-sm sm:text-base">
           {props.buttonTitle}
-        </text>
+        </p>
       </button>
     </>
   );
